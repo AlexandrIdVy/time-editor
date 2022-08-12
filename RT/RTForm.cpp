@@ -11,11 +11,11 @@ void main(array<String^>^ arg) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	RT::RTForm form; //WinFormsTest - имя вашего проекта
+	RT::RTForm form; //WinFormsTest - РёРјСЏ РІР°С€РµРіРѕ РїСЂРѕРµРєС‚Р°
 	Application::Run(% form);	
 }
 
-// функция для подсчета суммы кодов символов ASCII
+// С„СѓРЅРєС†РёСЏ РґР»СЏ РїРѕРґСЃС‡РµС‚Р° СЃСѓРјРјС‹ РєРѕРґРѕРІ СЃРёРјРІРѕР»РѕРІ ASCII
 int sumKodAscii(std::string x)
 {
 	int a, b(0);
@@ -28,7 +28,7 @@ int sumKodAscii(std::string x)
 	return b;
 }
 
-// функция для извлечения посдтроки со временем
+// С„СѓРЅРєС†РёСЏ РґР»СЏ РёР·РІР»РµС‡РµРЅРёСЏ РїРѕСЃРґС‚СЂРѕРєРё СЃРѕ РІСЂРµРјРµРЅРµРј
 std::string get_str_between_two_str(const std::string& s, const std::string& start_delim, const std::string& stop_delim)
 {
 	unsigned first_delim_pos = s.find(start_delim);
@@ -45,21 +45,21 @@ std::string poisk(std::string route, int numberStrTimeSearchHead)
 
 	std::ifstream finP(route);
 
-	// проверка на наличие файла
+	// РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°
 	if (!finP) {
 		finP.close();
 		timeP = "121";
 		return timeP;
 	}
 
-	// ищем и выводим строку со временем процесса
+	// РёС‰РµРј Рё РІС‹РІРѕРґРёРј СЃС‚СЂРѕРєСѓ СЃРѕ РІСЂРµРјРµРЅРµРј РїСЂРѕС†РµСЃСЃР°
 	for (int stroka(0); getline(finP, timeTextlineP); stroka++)
 	{
 		if (stroka == numberStrTimeSearchHead) {
 			break;
 		}
 	}	
-	// извлекаем из строки подстроку со временем
+	// РёР·РІР»РµРєР°РµРј РёР· СЃС‚СЂРѕРєРё РїРѕРґСЃС‚СЂРѕРєСѓ СЃРѕ РІСЂРµРјРµРЅРµРј
 	std::string sotrP = timeTextlineP;
 	std::string start_delimP = ";Int=";
 	std::string stop_delimP = ";i0=";
@@ -77,10 +77,10 @@ int poiskIzamena(std::string fileName, int numberStrTimeSearch, std::string hh, 
 	int sumOldTime, sumNewTime;
 
 	std::ifstream fin(fileName);
-	// проверка на наличие файла
+	// РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°
 	if (!fin) { fin.close(); return 0; }
 
-		// ищем и выводим строку со временем процесса
+		// РёС‰РµРј Рё РІС‹РІРѕРґРёРј СЃС‚СЂРѕРєСѓ СЃРѕ РІСЂРµРјРµРЅРµРј РїСЂРѕС†РµСЃСЃР°
 		for (int stroka(0); getline(fin, timeTextline); stroka++)
 		{
 			if (stroka == numberStrTimeSearch) {
@@ -89,22 +89,22 @@ int poiskIzamena(std::string fileName, int numberStrTimeSearch, std::string hh, 
 		}
 	std::string oldTimeTextline = timeTextline;
 
-		// извлекаем из строки подстроку со временем
+		// РёР·РІР»РµРєР°РµРј РёР· СЃС‚СЂРѕРєРё РїРѕРґСЃС‚СЂРѕРєСѓ СЃРѕ РІСЂРµРјРµРЅРµРј
 		std::string sotr = timeTextline;
 			std::string start_delim = ";Int=";
 			std::string stop_delim = ";i0=";
 		std::string time = get_str_between_two_str(sotr, start_delim, stop_delim);
 
-	// считаем сумму кодов символов подстроки time																				
+	// СЃС‡РёС‚Р°РµРј СЃСѓРјРјСѓ РєРѕРґРѕРІ СЃРёРјРІРѕР»РѕРІ РїРѕРґСЃС‚СЂРѕРєРё time																				
 	sumOldTime = sumKodAscii(time);
 
-	// вводим новое время	
+	// РІРІРѕРґРёРј РЅРѕРІРѕРµ РІСЂРµРјСЏ	
 		std::string new_time = hh + ":" + mm + ":" + ss;	
 
-	// считаем сумму кодов символов нового времени 
+	// СЃС‡РёС‚Р°РµРј СЃСѓРјРјСѓ РєРѕРґРѕРІ СЃРёРјРІРѕР»РѕРІ РЅРѕРІРѕРіРѕ РІСЂРµРјРµРЅРё 
 	sumNewTime = sumKodAscii(new_time);
 
-		// заменяем в строке textline старое время time на новое new_time
+		// Р·Р°РјРµРЅСЏРµРј РІ СЃС‚СЂРѕРєРµ textline СЃС‚Р°СЂРѕРµ РІСЂРµРјСЏ time РЅР° РЅРѕРІРѕРµ new_time
 		std::string findStrTime = time;
 		std::string replaceStrTime = new_time;
 		std::string::size_type indexTime;
@@ -116,12 +116,12 @@ int poiskIzamena(std::string fileName, int numberStrTimeSearch, std::string hh, 
 
 	fin.close();
 
-	// открываем файл для изменение первой строки
+	// РѕС‚РєСЂС‹РІР°РµРј С„Р°Р№Р» РґР»СЏ РёР·РјРµРЅРµРЅРёРµ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРё
 	std::fstream fon(fileName, std::ios::in | std::ios::out);
-	// проверка на наличие файла
+	// РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°
 	if (!fon) { fon.close(); return 0; }
 
-		// пропускаем нужное количество строк и стваим указатель на начало нужной строки
+		// РїСЂРѕРїСѓСЃРєР°РµРј РЅСѓР¶РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє Рё СЃС‚РІР°РёРј СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅР°С‡Р°Р»Рѕ РЅСѓР¶РЅРѕР№ СЃС‚СЂРѕРєРё
 		for (int stroka(0); getline(fon, oldTimeTextline); stroka++)
 		{
 			if (stroka == numberStrTimeReplace) {
@@ -130,24 +130,24 @@ int poiskIzamena(std::string fileName, int numberStrTimeSearch, std::string hh, 
 		}
 	std::fstream::pos_type posTime = fon.tellg();
 
-		// читаем следующую строку	
+		// С‡РёС‚Р°РµРј СЃР»РµРґСѓСЋС‰СѓСЋ СЃС‚СЂРѕРєСѓ	
 		getline(fon, oldTimeTextline);
 			if (timeTextline.length() == newTimeTextline.length()) 
 			{
-				// возвращаемся к началу строки и меняем ее
+				// РІРѕР·РІСЂР°С‰Р°РµРјСЃСЏ Рє РЅР°С‡Р°Р»Сѓ СЃС‚СЂРѕРєРё Рё РјРµРЅСЏРµРј РµРµ
 				fon.seekp(posTime);
 				fon << newTimeTextline;
 			}
 	fon.close();
 
 				std::ifstream finn(fileName);
-				// проверка на наличие файла
+				// РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°
 				if (!finn) { finn.close(); return 0; }
 
-					// ищем и выводим первую строку
+					// РёС‰РµРј Рё РІС‹РІРѕРґРёРј РїРµСЂРІСѓСЋ СЃС‚СЂРѕРєСѓ
 					getline(finn, textline);
 
-					// удаляем фразу "" из строки
+					// СѓРґР°Р»СЏРµРј С„СЂР°Р·Сѓ "" РёР· СЃС‚СЂРѕРєРё
 					std::string findstr = version;
 					std::string replacestr = "";
 					std::string::size_type index;
@@ -156,38 +156,38 @@ int poiskIzamena(std::string fileName, int numberStrTimeSearch, std::string hh, 
 							textline.replace(index, findstr.size(), replacestr);
 						}
 
-					// переводим строку в int'овый тип
+					// РїРµСЂРµРІРѕРґРёРј СЃС‚СЂРѕРєСѓ РІ int'РѕРІС‹Р№ С‚РёРї
 					std::string kod = textline;
 					int k_kod(0);
 					std::istringstream ist(kod);
 					ist >> k_kod;
 
-					// прибавляем число к строке
+					// РїСЂРёР±Р°РІР»СЏРµРј С‡РёСЃР»Рѕ Рє СЃС‚СЂРѕРєРµ
 					k_kod = (k_kod - sumOldTime) + sumNewTime;
 
-					// переводим строку обратно в string
+					// РїРµСЂРµРІРѕРґРёРј СЃС‚СЂРѕРєСѓ РѕР±СЂР°С‚РЅРѕ РІ string
 					std::stringstream str;
 					str << k_kod;
 					str >> textline;
 
-					// вставляем фразу "" в начало строки
+					// РІСЃС‚Р°РІР»СЏРµРј С„СЂР°Р·Сѓ "" РІ РЅР°С‡Р°Р»Рѕ СЃС‚СЂРѕРєРё
 					textline.insert(0, version);
 					std::string newTextline = textline;
 
 					finn.close();
 
-					// открываем файл для изменение первой строки							
+					// РѕС‚РєСЂС‹РІР°РµРј С„Р°Р№Р» РґР»СЏ РёР·РјРµРЅРµРЅРёРµ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРё							
 					std::fstream fonn(fileName, std::ios::in | std::ios::out);
-					// проверка на наличие файла
+					// РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°
 					if (!fonn) { fonn.close(); return 0; }
 
-					// пропускаем нужное количество строк и стваим указатель на начало нужной строки	
+					// РїСЂРѕРїСѓСЃРєР°РµРј РЅСѓР¶РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє Рё СЃС‚РІР°РёРј СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅР°С‡Р°Р»Рѕ РЅСѓР¶РЅРѕР№ СЃС‚СЂРѕРєРё	
 					std::fstream::pos_type pos = fonn.tellg();
 
-					// читаем первую строку
+					// С‡РёС‚Р°РµРј РїРµСЂРІСѓСЋ СЃС‚СЂРѕРєСѓ
 					getline(fonn, textline);
 						if (textline.length() == newTextline.length()) {
-							// возвращаемся к началу строки и меняем ее
+							// РІРѕР·РІСЂР°С‰Р°РµРјСЃСЏ Рє РЅР°С‡Р°Р»Сѓ СЃС‚СЂРѕРєРё Рё РјРµРЅСЏРµРј РµРµ
 							fonn.seekp(pos);
 							fonn << newTextline;
 						}
