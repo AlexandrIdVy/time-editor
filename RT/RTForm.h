@@ -6,7 +6,7 @@
 #include <sstream>
 #include "Header.h"
 
-// объявляем функции для поиска времени
+// РѕР±СЉСЏРІР»СЏРµРј С„СѓРЅРєС†РёРё РґР»СЏ РїРѕРёСЃРєР° РІСЂРµРјРµРЅРё
 std::string poisk(std::string route, int numberStrTimeSearchHead);
 
 namespace RT {
@@ -20,7 +20,7 @@ namespace RT {
 	using namespace msclr::interop;	
 
 	/// <summary>
-	/// Сводка для RTForm
+	/// РЎРІРѕРґРєР° РґР»СЏ RTForm
 	/// </summary>
 	public ref class RTForm : public System::Windows::Forms::Form
 	{
@@ -30,20 +30,20 @@ namespace RT {
 		{
 			InitializeComponent();
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//			
 		}
-	// объявляемый открытый метод Set для того, чтобы можно было изменить текст label1 (текущее время процесса)
-		// ПОЛИКРЕМНИЙ
+	// РѕР±СЉСЏРІР»СЏРµРјС‹Р№ РѕС‚РєСЂС‹С‚С‹Р№ РјРµС‚РѕРґ Set РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РёР·РјРµРЅРёС‚СЊ С‚РµРєСЃС‚ label1 (С‚РµРєСѓС‰РµРµ РІСЂРµРјСЏ РїСЂРѕС†РµСЃСЃР°)
+		// РџРћР›РРљР Р•РњРќРР™
 	public: void Set1(String^ DataText) { label1->Text = DataText; }
 	public: void Set2(String^ DataText) { label6->Text = DataText; }
 	public: void Set3(String^ DataText) { label7->Text = DataText; }	
-		// АЗО
+		// РђР—Рћ
 	public: void Set5(String^ DataText) { label24->Text = DataText; }
 	public: void Set6(String^ DataText) { label25->Text = DataText; }
 	public: void Set7(String^ DataText) { label26->Text = DataText; }
 	public: void Set8(String^ DataText) { label27->Text = DataText; }	
-		// НИТРИД
+		// РќРРўР РР”
 	public: void Set11(String^ DataText) { label47->Text = DataText; }
 	public: void Set12(String^ DataText) { label48->Text = DataText; }
 	public: void Set13(String^ DataText) { label49->Text = DataText; }
@@ -51,7 +51,7 @@ namespace RT {
 	
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~RTForm()
 		{
@@ -199,14 +199,14 @@ public:
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -304,7 +304,7 @@ public:
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 30);
 			this->button2->TabIndex = 2;
-			this->button2->Text = L"Изменить";
+			this->button2->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &RTForm::Button2_Click);
 			// 
@@ -347,7 +347,7 @@ public:
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage1->Size = System::Drawing::Size(259, 196);
 			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"1-й канал";
+			this->tabPage1->Text = L"1-Р№ РєР°РЅР°Р»";
 			// 
 			// tableLayoutPanel1
 			// 
@@ -423,7 +423,7 @@ public:
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(19, 17);
 			this->label2->TabIndex = 4;
-			this->label2->Text = L"№";
+			this->label2->Text = L"в„–";
 			// 
 			// label3
 			// 
@@ -435,7 +435,7 @@ public:
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(41, 17);
 			this->label3->TabIndex = 5;
-			this->label3->Text = L"Слой";
+			this->label3->Text = L"РЎР»РѕР№";
 			// 
 			// label4
 			// 
@@ -447,7 +447,7 @@ public:
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(50, 17);
 			this->label4->TabIndex = 6;
-			this->label4->Text = L"Время";
+			this->label4->Text = L"Р’СЂРµРјСЏ";
 			// 
 			// label5
 			// 
@@ -459,7 +459,7 @@ public:
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(51, 17);
 			this->label5->TabIndex = 7;
-			this->label5->Text = L"Выбор";
+			this->label5->Text = L"Р’С‹Р±РѕСЂ";
 			// 
 			// label6
 			// 
@@ -483,7 +483,7 @@ public:
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 30);
 			this->button3->TabIndex = 10;
-			this->button3->Text = L"Изменить";
+			this->button3->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &RTForm::Button3_Click);
 			// 
@@ -509,7 +509,7 @@ public:
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 30);
 			this->button1->TabIndex = 9;
-			this->button1->Text = L"Изменить";
+			this->button1->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &RTForm::Button1_Click);
 			// 
@@ -523,7 +523,7 @@ public:
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(61, 15);
 			this->label9->TabIndex = 14;
-			this->label9->Text = L"О.1,0Г-18";
+			this->label9->Text = L"Рћ.1,0Р“-18";
 			// 
 			// label10
 			// 
@@ -535,7 +535,7 @@ public:
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(61, 15);
 			this->label10->TabIndex = 15;
-			this->label10->Text = L"О.0,6Г-21";
+			this->label10->Text = L"Рћ.0,6Р“-21";
 			// 
 			// label13
 			// 
@@ -559,7 +559,7 @@ public:
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(61, 15);
 			this->label11->TabIndex = 16;
-			this->label11->Text = L"О.1,5Г-24";
+			this->label11->Text = L"Рћ.1,5Р“-24";
 			// 
 			// tabPage2
 			// 
@@ -570,7 +570,7 @@ public:
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage2->Size = System::Drawing::Size(259, 196);
 			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"2-й канал";
+			this->tabPage2->Text = L"2-Р№ РєР°РЅР°Р»";
 			// 
 			// tableLayoutPanel2
 			// 
@@ -639,7 +639,7 @@ public:
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(75, 30);
 			this->button8->TabIndex = 9;
-			this->button8->Text = L"Изменить";
+			this->button8->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button8->UseVisualStyleBackColor = true;
 			this->button8->Click += gcnew System::EventHandler(this, &RTForm::Button8_Click);
 			// 
@@ -652,7 +652,7 @@ public:
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(75, 30);
 			this->button7->TabIndex = 2;
-			this->button7->Text = L"Изменить";
+			this->button7->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &RTForm::Button7_Click);
 			// 
@@ -691,7 +691,7 @@ public:
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(19, 17);
 			this->label20->TabIndex = 4;
-			this->label20->Text = L"№";
+			this->label20->Text = L"в„–";
 			// 
 			// label21
 			// 
@@ -703,7 +703,7 @@ public:
 			this->label21->Name = L"label21";
 			this->label21->Size = System::Drawing::Size(41, 17);
 			this->label21->TabIndex = 5;
-			this->label21->Text = L"Слой";
+			this->label21->Text = L"РЎР»РѕР№";
 			// 
 			// label22
 			// 
@@ -715,7 +715,7 @@ public:
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(50, 17);
 			this->label22->TabIndex = 6;
-			this->label22->Text = L"Время";
+			this->label22->Text = L"Р’СЂРµРјСЏ";
 			// 
 			// label23
 			// 
@@ -727,7 +727,7 @@ public:
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(51, 17);
 			this->label23->TabIndex = 7;
-			this->label23->Text = L"Выбор";
+			this->label23->Text = L"Р’С‹Р±РѕСЂ";
 			// 
 			// label24
 			// 
@@ -791,7 +791,7 @@ public:
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(61, 15);
 			this->label28->TabIndex = 14;
-			this->label28->Text = L"О.0,7Г-08";
+			this->label28->Text = L"Рћ.0,7Р“-08";
 			// 
 			// label29
 			// 
@@ -803,7 +803,7 @@ public:
 			this->label29->Name = L"label29";
 			this->label29->Size = System::Drawing::Size(61, 15);
 			this->label29->TabIndex = 15;
-			this->label29->Text = L"О.0,6Г-14";
+			this->label29->Text = L"Рћ.0,6Р“-14";
 			// 
 			// label30
 			// 
@@ -827,7 +827,7 @@ public:
 			this->label31->Name = L"label31";
 			this->label31->Size = System::Drawing::Size(61, 15);
 			this->label31->TabIndex = 16;
-			this->label31->Text = L"О.1,2Г-17";
+			this->label31->Text = L"Рћ.1,2Р“-17";
 			// 
 			// label32
 			// 
@@ -839,7 +839,7 @@ public:
 			this->label32->Name = L"label32";
 			this->label32->Size = System::Drawing::Size(61, 15);
 			this->label32->TabIndex = 17;
-			this->label32->Text = L"О.0,4Г-20";
+			this->label32->Text = L"Рћ.0,4Р“-20";
 			// 
 			// button6
 			// 
@@ -850,7 +850,7 @@ public:
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(75, 30);
 			this->button6->TabIndex = 11;
-			this->button6->Text = L"Изменить";
+			this->button6->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &RTForm::Button6_Click);
 			// 
@@ -863,7 +863,7 @@ public:
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(75, 30);
 			this->button5->TabIndex = 10;
-			this->button5->Text = L"Изменить";
+			this->button5->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &RTForm::Button5_Click);
 			// 
@@ -876,7 +876,7 @@ public:
 			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage3->Size = System::Drawing::Size(259, 196);
 			this->tabPage3->TabIndex = 2;
-			this->tabPage3->Text = L"3-й канал";
+			this->tabPage3->Text = L"3-Р№ РєР°РЅР°Р»";
 			// 
 			// tabControl2
 			// 
@@ -897,7 +897,7 @@ public:
 			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage4->Size = System::Drawing::Size(249, 156);
 			this->tabPage4->TabIndex = 0;
-			this->tabPage4->Text = L"ФСС";
+			this->tabPage4->Text = L"Р¤РЎРЎ";
 			// 
 			// tableLayoutPanel4
 			// 
@@ -948,7 +948,7 @@ public:
 			this->label43->Name = L"label43";
 			this->label43->Size = System::Drawing::Size(22, 17);
 			this->label43->TabIndex = 4;
-			this->label43->Text = L"№";
+			this->label43->Text = L"в„–";
 			// 
 			// label44
 			// 
@@ -960,7 +960,7 @@ public:
 			this->label44->Name = L"label44";
 			this->label44->Size = System::Drawing::Size(41, 17);
 			this->label44->TabIndex = 5;
-			this->label44->Text = L"Слой";
+			this->label44->Text = L"РЎР»РѕР№";
 			// 
 			// label46
 			// 
@@ -972,7 +972,7 @@ public:
 			this->label46->Name = L"label46";
 			this->label46->Size = System::Drawing::Size(51, 17);
 			this->label46->TabIndex = 7;
-			this->label46->Text = L"Выбор";
+			this->label46->Text = L"Р’С‹Р±РѕСЂ";
 			// 
 			// label49
 			// 
@@ -1035,7 +1035,7 @@ public:
 			this->label45->Name = L"label45";
 			this->label45->Size = System::Drawing::Size(50, 17);
 			this->label45->TabIndex = 6;
-			this->label45->Text = L"Время";
+			this->label45->Text = L"Р’СЂРµРјСЏ";
 			// 
 			// label42
 			// 
@@ -1072,7 +1072,7 @@ public:
 			this->label54->Name = L"label54";
 			this->label54->Size = System::Drawing::Size(45, 15);
 			this->label54->TabIndex = 16;
-			this->label54->Text = L"КП 8%";
+			this->label54->Text = L"РљРџ 8%";
 			// 
 			// label51
 			// 
@@ -1084,7 +1084,7 @@ public:
 			this->label51->Name = L"label51";
 			this->label51->Size = System::Drawing::Size(55, 15);
 			this->label51->TabIndex = 14;
-			this->label51->Text = L"КП 1,5%";
+			this->label51->Text = L"РљРџ 1,5%";
 			// 
 			// label52
 			// 
@@ -1096,7 +1096,7 @@ public:
 			this->label52->Name = L"label52";
 			this->label52->Size = System::Drawing::Size(56, 15);
 			this->label52->TabIndex = 15;
-			this->label52->Text = L"КП 2-3%";
+			this->label52->Text = L"РљРџ 2-3%";
 			// 
 			// button12
 			// 
@@ -1107,7 +1107,7 @@ public:
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(75, 30);
 			this->button12->TabIndex = 2;
-			this->button12->Text = L"Изменить";
+			this->button12->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button12->UseVisualStyleBackColor = true;
 			this->button12->Click += gcnew System::EventHandler(this, &RTForm::Button12_Click);
 			// 
@@ -1120,7 +1120,7 @@ public:
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(75, 30);
 			this->button13->TabIndex = 11;
-			this->button13->Text = L"Изменить";
+			this->button13->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button13->UseVisualStyleBackColor = true;
 			this->button13->Click += gcnew System::EventHandler(this, &RTForm::Button13_Click);
 			// 
@@ -1133,7 +1133,7 @@ public:
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(75, 30);
 			this->button11->TabIndex = 9;
-			this->button11->Text = L"Изменить";
+			this->button11->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button11->UseVisualStyleBackColor = true;
 			this->button11->Click += gcnew System::EventHandler(this, &RTForm::Button11_Click);
 			// 
@@ -1145,7 +1145,7 @@ public:
 			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage5->Size = System::Drawing::Size(249, 156);
 			this->tabPage5->TabIndex = 1;
-			this->tabPage5->Text = L"БФСС";
+			this->tabPage5->Text = L"Р‘Р¤РЎРЎ";
 			// 
 			// tableLayoutPanel5
 			// 
@@ -1186,7 +1186,7 @@ public:
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(22, 17);
 			this->label8->TabIndex = 5;
-			this->label8->Text = L"№";
+			this->label8->Text = L"в„–";
 			// 
 			// label12
 			// 
@@ -1198,7 +1198,7 @@ public:
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(41, 17);
 			this->label12->TabIndex = 6;
-			this->label12->Text = L"Слой";
+			this->label12->Text = L"РЎР»РѕР№";
 			// 
 			// label50
 			// 
@@ -1235,7 +1235,7 @@ public:
 			this->label55->Name = L"label55";
 			this->label55->Size = System::Drawing::Size(62, 15);
 			this->label55->TabIndex = 17;
-			this->label55->Text = L"КП БФСС";
+			this->label55->Text = L"РљРџ Р‘Р¤РЎРЎ";
 			// 
 			// label16
 			// 
@@ -1247,7 +1247,7 @@ public:
 			this->label16->Name = L"label16";
 			this->label16->Size = System::Drawing::Size(50, 17);
 			this->label16->TabIndex = 7;
-			this->label16->Text = L"Время";
+			this->label16->Text = L"Р’СЂРµРјСЏ";
 			// 
 			// label33
 			// 
@@ -1259,7 +1259,7 @@ public:
 			this->label33->Name = L"label33";
 			this->label33->Size = System::Drawing::Size(51, 17);
 			this->label33->TabIndex = 8;
-			this->label33->Text = L"Выбор";
+			this->label33->Text = L"Р’С‹Р±РѕСЂ";
 			// 
 			// button14
 			// 
@@ -1270,7 +1270,7 @@ public:
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(75, 30);
 			this->button14->TabIndex = 10;
-			this->button14->Text = L"Изменить";
+			this->button14->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button14->UseVisualStyleBackColor = true;
 			this->button14->Click += gcnew System::EventHandler(this, &RTForm::Button14_Click);
 			// 
@@ -1287,7 +1287,7 @@ public:
 			this->MinimizeBox = false;
 			this->Name = L"RTForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
-			this->Text = L"Редактор времени процессов";
+			this->Text = L"Р РµРґР°РєС‚РѕСЂ РІСЂРµРјРµРЅРё РїСЂРѕС†РµСЃСЃРѕРІ";
 			this->Load += gcnew System::EventHandler(this, &RTForm::RTForm_Load);
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
@@ -1309,31 +1309,31 @@ public:
 		}
 #pragma endregion		
 	
-	// объявляем обработчик нажатия кнопки для вызова формы ReplaceRT
-		// ПОЛИКРЕМНИЙ
+	// РѕР±СЉСЏРІР»СЏРµРј РѕР±СЂР°Р±РѕС‚С‡РёРє РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё РґР»СЏ РІС‹Р·РѕРІР° С„РѕСЂРјС‹ ReplaceRT
+		// РџРћР›РРљР Р•РњРќРР™
 	private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Button2_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Button3_Click(System::Object^ sender, System::EventArgs^ e);	
-		// АЗО
+		// РђР—Рћ
 	private: System::Void Button5_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Button6_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Button7_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Button8_Click(System::Object^ sender, System::EventArgs^ e);
-		// НИТРИД
+		// РќРРўР РР”
 	private: System::Void Button11_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Button12_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Button13_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Button14_Click(System::Object^ sender, System::EventArgs^ e);	
 	
 	private: System::Void RTForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		//	ПОЛИКРЕМНИЙ
+		//	РџРћР›РРљР Р•РњРќРР™
 		String^ textR5 = marshal_as<String^>(poisk(fileNamePolikrR5, nSTSHPolikr));
 		label1->Text = textR5;
 		String^ textR6 = marshal_as<String^>(poisk(fileNamePolikrR6, nSTSHPolikr));
 		label6->Text = textR6;
 		String^ textR9 = marshal_as<String^>(poisk(fileNamePolikrR9, nSTSHPolikr));
 		label7->Text = textR9;		
-		// АЗО
+		// РђР—Рћ
 		String^ textAR1 = marshal_as<String^>(poisk(fileNameAZOR1, nSTSHAZO));
 		label24->Text = textAR1;
 		String^ textAR2 = marshal_as<String^>(poisk(fileNameAZOR2, nSTSHAZO));
@@ -1342,7 +1342,7 @@ public:
 		label26->Text = textAR3;
 		String^ textAR4 = marshal_as<String^>(poisk(fileNameAZOR4, nSTSHAZO));
 		label27->Text = textAR4;		
-		// НИТРИД
+		// РќРРўР РР”
 		String^ textNR1 = marshal_as<String^>(poisk(fileNameNitridR1, nSTSHFSS));
 		label47->Text = textNR1;
 		String^ textNR3 = marshal_as<String^>(poisk(fileNameNitridR3, nSTSHFSS));
