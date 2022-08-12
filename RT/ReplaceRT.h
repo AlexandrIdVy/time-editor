@@ -7,7 +7,7 @@
 #include "RTForm.h"
 #include "Header.h"
 
-// объявляем функцию для редактирования времени
+// РѕР±СЉСЏРІР»СЏРµРј С„СѓРЅРєС†РёСЋ РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РІСЂРµРјРµРЅРё
 int poiskIzamena(std::string fileName, int numberStrTimeSearch, std::string hh, std::string mm, std::string ss, int numberStrTimeReplace);
 
 namespace RT {
@@ -21,25 +21,25 @@ namespace RT {
 	using namespace msclr::interop;
 
 	/// <summary>
-	/// Сводка для ReplaceRT
+	/// РЎРІРѕРґРєР° РґР»СЏ ReplaceRT
 	/// </summary>
 	public ref class ReplaceRT : public System::Windows::Forms::Form
 	{
-	// Создаем конструктор, который будет принимать и сохранять ссылку на первую форму для дальнейшего использования ->
+	// РЎРѕР·РґР°РµРј РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ, РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ РїСЂРёРЅРёРјР°С‚СЊ Рё СЃРѕС…СЂР°РЅСЏС‚СЊ СЃСЃС‹Р»РєСѓ РЅР° РїРµСЂРІСѓСЋ С„РѕСЂРјСѓ РґР»СЏ РґР°Р»СЊРЅРµР№С€РµРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ ->
 	public:
 		ReplaceRT(RTForm^ parent)
 		{
 			InitializeComponent();
 			parentForm = parent;			
 			//
-			//TODO: добавьте код конструктора
+			//TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
 			//
 			
 		}		
 
 	protected:
 		/// <summary>
-		/// Освободить все используемые ресурсы.
+		/// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
 		/// </summary>
 		~ReplaceRT()
 		{
@@ -57,7 +57,7 @@ namespace RT {
 
 	private:
 		/// <summary>
-		/// Обязательная переменная конструктора.
+		/// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 	public: System::Windows::Forms::Label^ label1;
@@ -82,8 +82,8 @@ namespace RT {
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Требуемый метод для поддержки конструктора — не изменяйте 
-		/// содержимое этого метода с помощью редактора кода.
+		/// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
+		/// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -158,7 +158,7 @@ namespace RT {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(95, 35);
 			this->button1->TabIndex = 3;
-			this->button1->Text = L"Изменить";
+			this->button1->Text = L"РР·РјРµРЅРёС‚СЊ";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &ReplaceRT::Button1_Click);
 			// 
@@ -198,7 +198,7 @@ namespace RT {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(95, 35);
 			this->button2->TabIndex = 6;
-			this->button2->Text = L"Отмена";
+			this->button2->Text = L"РћС‚РјРµРЅР°";
 			this->button2->UseVisualStyleBackColor = false;
 			// 
 			// label3
@@ -210,7 +210,7 @@ namespace RT {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(119, 25);
 			this->label3->TabIndex = 7;
-			this->label3->Text = L"Внимание!";
+			this->label3->Text = L"Р’РЅРёРјР°РЅРёРµ!";
 			// 
 			// label4
 			// 
@@ -221,7 +221,7 @@ namespace RT {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(175, 15);
 			this->label4->TabIndex = 8;
-			this->label4->Text = L"Включен редактор процесса:";
+			this->label4->Text = L"Р’РєР»СЋС‡РµРЅ СЂРµРґР°РєС‚РѕСЂ РїСЂРѕС†РµСЃСЃР°:";
 			// 
 			// label5
 			// 
@@ -232,7 +232,7 @@ namespace RT {
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(73, 17);
 			this->label5->TabIndex = 9;
-			this->label5->Text = L"Режим №:";
+			this->label5->Text = L"Р РµР¶РёРј в„–:";
 			// 
 			// label6
 			// 
@@ -243,7 +243,7 @@ namespace RT {
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(137, 17);
 			this->label6->TabIndex = 10;
-			this->label6->Text = L"Обозначение слоя:";
+			this->label6->Text = L"РћР±РѕР·РЅР°С‡РµРЅРёРµ СЃР»РѕСЏ:";
 			// 
 			// label7
 			// 
@@ -266,7 +266,7 @@ namespace RT {
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(249, 24);
 			this->label8->TabIndex = 12;
-			this->label8->Text = L"Введите время: ЧЧ:ММ:СС";
+			this->label8->Text = L"Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ: Р§Р§:РњРњ:РЎРЎ";
 			// 
 			// label9
 			// 
@@ -319,7 +319,7 @@ namespace RT {
 			this->ShowIcon = false;
 			this->ShowInTaskbar = false;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
-			this->Text = L"Редактирование времени процесса";
+			this->Text = L"Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РІСЂРµРјРµРЅРё РїСЂРѕС†РµСЃСЃР°";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -328,7 +328,7 @@ namespace RT {
 	private: System::Void Button1_Click(System::Object^ sender, System::EventArgs^ e) {		
 			switch (Int32::Parse(label9->Text))
 			{
-					// ПОЛИКРЕМНИЙ
+					// РџРћР›РРљР Р•РњРќРР™
 			case 1:
 				fileName = fileNamePolikrR5; nSTS = nSTSPolikr; nSTR = nSTRPolikr; version = versionPolikr;
 				break;
@@ -338,7 +338,7 @@ namespace RT {
 			case 3:
 				fileName = fileNamePolikrR9; nSTS = nSTSPolikr; nSTR = nSTRPolikr; version = versionPolikr;
 				break;			
-					// АЗО
+					// РђР—Рћ
 			case 5:
 				fileName = fileNameAZOR1; nSTS = nSTSAZO; nSTR = nSTRAZO; version = versionAZO;
 				break;
@@ -351,7 +351,7 @@ namespace RT {
 			case 8:
 				fileName = fileNameAZOR4; nSTS = nSTSAZO; nSTR = nSTRAZO; version = versionAZO;
 				break;			
-					// НИТРИД
+					// РќРРўР РР”
 			case 11:
 				fileName = fileNameNitridR1; nSTS = nSTSFSS; nSTR = nSTRFSS; version = versionNitrid;
 				break;
@@ -365,17 +365,17 @@ namespace RT {
 				fileName = fileNameNitridR5; nSTS = nSTSNitrid; nSTR = nSTRNitrid; version = versionNitrid;
 				break;			
 			default:
-				MessageBox::Show("Неизвестная ошибка!", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				MessageBox::Show("РќРµРёР·РІРµСЃС‚РЅР°СЏ РѕС€РёР±РєР°!", "РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
 				break;
 			}		
 		String^ S1 = textBox1->Text;
 		String^ S2 = textBox2->Text;
 		String^ S3 = textBox3->Text;			
-			// добавлем 0 первым символом, если в textBox введена одна цифра 
+			// РґРѕР±Р°РІР»РµРј 0 РїРµСЂРІС‹Рј СЃРёРјРІРѕР»РѕРј, РµСЃР»Рё РІ textBox РІРІРµРґРµРЅР° РѕРґРЅР° С†РёС„СЂР° 
 			if (textBox1->TextLength < 2) {	S1 = "0" + S1; }
 			if (textBox2->TextLength < 2) { S2 = "0" + S2; }
 			if (textBox3->TextLength < 2) { S3 = "0" + S3; }
-			// проверяем чтобы во всех textBox'ах не было нулей
+			// РїСЂРѕРІРµСЂСЏРµРј С‡С‚РѕР±С‹ РІРѕ РІСЃРµС… textBox'Р°С… РЅРµ Р±С‹Р»Рѕ РЅСѓР»РµР№
 			if (textBox1->Text->Length == 0 || textBox2->Text->Length == 0 || textBox3->Text->Length == 0)
 				return;
 			int TB1 = Convert::ToInt32(textBox1->Text);
@@ -386,24 +386,24 @@ namespace RT {
 				int OTS = Int32::Parse(label10->Text->Substring(6, 2));
 				if (TB1 == OTH && TB2 == OTM && TB3 == OTS)
 				{
-					MessageBox::Show("Введеное время совпадает с текущим!", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+					MessageBox::Show("Р’РІРµРґРµРЅРѕРµ РІСЂРµРјСЏ СЃРѕРІРїР°РґР°РµС‚ СЃ С‚РµРєСѓС‰РёРј!", "РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
 					return;
 				}
 			if (TB1 == 0 && TB2 == 0 && TB3 ==0)
 			{				
-				MessageBox::Show("Время введено некорректно!", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				MessageBox::Show("Р’СЂРµРјСЏ РІРІРµРґРµРЅРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ!", "РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
 				return;				
 			}
-		// конвертируем введеные значения из Syysytem::String^ в std::string
+		// РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј РІРІРµРґРµРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ РёР· Syysytem::String^ РІ std::string
 		std::string hours = marshal_as<std::string>(S1);
 		std::string minutes = marshal_as<std::string>(S2);
 		std::string seconds = marshal_as<std::string>(S3);
-		// запускаем функцию для поиска и замены времени
+		// Р·Р°РїСѓСЃРєР°РµРј С„СѓРЅРєС†РёСЋ РґР»СЏ РїРѕРёСЃРєР° Рё Р·Р°РјРµРЅС‹ РІСЂРµРјРµРЅРё
 		poiskIzamena(fileName, nSTS, hours, minutes, seconds, nSTR);
-		// вызываем метод Set родительской формы
+		// РІС‹Р·С‹РІР°РµРј РјРµС‚РѕРґ Set СЂРѕРґРёС‚РµР»СЊСЃРєРѕР№ С„РѕСЂРјС‹
 		switch (Int32::Parse(label9->Text))
 		{
-				// ПОЛИКРЕМНИЙ
+				// РџРћР›РРљР Р•РњРќРР™
 		case 1:
 			parentForm->Set1(S1 + ":" + S2 + ":" + S3);
 			break;
@@ -413,7 +413,7 @@ namespace RT {
 		case 3:
 			parentForm->Set3(S1 + ":" + S2 + ":" + S3);
 			break;		
-				// АЗО
+				// РђР—Рћ
 		case 5:
 			parentForm->Set5(S1 + ":" + S2 + ":" + S3);
 			break;
@@ -426,7 +426,7 @@ namespace RT {
 		case 8:
 			parentForm->Set8(S1 + ":" + S2 + ":" + S3);
 			break;		
-				// НИТРИД
+				// РќРРўР РР”
 		case 11:
 			parentForm->Set11(S1 + ":" + S2 + ":" + S3);
 			break;
@@ -440,26 +440,26 @@ namespace RT {
 			parentForm->Set14(S1 + ":" + S2 + ":" + S3);
 			break;		
 		default:
-			MessageBox::Show("Неизвестная ошибка!", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("РќРµРёР·РІРµСЃС‚РЅР°СЏ РѕС€РёР±РєР°!", "РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			break;
 		}
 				
 		this->Close();
 	}
 	private: System::Void TextBox1_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {		
-		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 8) // цифры и клавиша BackSpace
+		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 8) // С†РёС„СЂС‹ Рё РєР»Р°РІРёС€Р° BackSpace
 		{
 			e->Handled = true;
 		}		
 	}
 	private: System::Void TextBox2_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 8) // цифры и клавиша BackSpace
+		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 8) // С†РёС„СЂС‹ Рё РєР»Р°РІРёС€Р° BackSpace
 		{
 			e->Handled = true;
 		}
 	}
 	private: System::Void TextBox3_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
-		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 8) // цифры и клавиша BackSpace
+		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 8) // С†РёС„СЂС‹ Рё РєР»Р°РІРёС€Р° BackSpace
 		{
 			e->Handled = true;
 		}
@@ -471,7 +471,7 @@ namespace RT {
 		if (x > 3)
 		{
 			textBox1->Text = "";
-			MessageBox::Show("Часы введены некорректно! \nМаксимальное возможное значение 3.", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("Р§Р°СЃС‹ РІРІРµРґРµРЅС‹ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ! \nРњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РІРѕР·РјРѕР¶РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ 3.", "РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}	
 	}
 	private: System::Void TextBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -481,7 +481,7 @@ namespace RT {
 		if (x > 59)
 		{
 			textBox2->Text = "";
-			MessageBox::Show("Минуты введены некорректно! \nМаксимальное возможное значение 59.", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("РњРёРЅСѓС‚С‹ РІРІРµРґРµРЅС‹ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ! \nРњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РІРѕР·РјРѕР¶РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ 59.", "РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 	}
 	private: System::Void TextBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -491,7 +491,7 @@ namespace RT {
 		if (x > 59)
 		{
 			textBox3->Text = "";
-			MessageBox::Show("Секунды введены некорректно! \nМаксимальное возможное значение 59.", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			MessageBox::Show("РЎРµРєСѓРЅРґС‹ РІРІРµРґРµРЅС‹ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ! \nРњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РІРѕР·РјРѕР¶РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ 59.", "РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 	}
 	private: System::Void TextBox1_Leave(System::Object^ sender, System::EventArgs^ e) {
